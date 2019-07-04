@@ -14,12 +14,14 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background: url(images/art-back.jpg) no-repeat center fixed;
+  /* background: url(images/city.jpeg) no-repeat center fixed; */
+  background: #16162d;
+
   background-size: cover;
 }
 
 section {
-  padding: 6rem;
+  padding: 6rem 0;
 }
 a {
   text-decoration: none;
@@ -30,7 +32,7 @@ p {
   font-weight: 300;
 }
 img {
-  width: 100%;
+  width: 75%;
 }
 /*end global*/
 
@@ -98,7 +100,7 @@ header {
   top: -100vh;
   z-index: 50;
   /*after setting the animation to the navbar,hide the top with this code*/
-  background-color: #16162d;
+  background-color: #191942;
   border-bottom-right-radius: 100%;
   border-bottom-left-radius: 100%;
   transition: all 650ms cubic-bezier(1, 0, 0, 1);
@@ -120,12 +122,12 @@ li {
   font-size: 5rem;
   padding: 1rem;
 }
-.nav-link:hover,
+/* .nav-link:hover,
 .nav-link:focus {
-  background: linear-gradient (to top, #ffe838, #fd57df);
+  background: linear -gradient (to top, #ffe838, #fd57df);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 /*animation for the navbar to flip/*
 
@@ -139,7 +141,7 @@ li {
 
 /*burger menu*/
 .menu-toggler {
-  position: absolute;
+  position: fixed;
   top: 5rem;
   right: 5rem;
   width: 5rem;
@@ -159,9 +161,11 @@ li {
   transform: rotate(-45deg);
 }
 .bar {
-  background: linear-gradient(to right, #ffe838, #fd57bf);
+  /* background: linear-gradient(to right, #ffe838, #fd57bf); */
+  background: #fd57bf;
   width: 100%;
-  height: 4px solid #ffe838;
+  height: 4px;
+  border: 1px solid yellow;
   border-radius: 0.8rem;
   border-radius: 0.8rem;
 }
@@ -200,9 +204,10 @@ li {
   font-size: 20rem;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background: linear-gradient (to top, #ffe838, #fd57df);
+  /* background: linear-gradient (to top, #ffe838, #fd57df);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+
   padding: 1rem; /*fully visible*/
   user-select: none; /*to avoid dragging around th logo*/
 }
@@ -210,6 +215,7 @@ li {
   font-size: 2rem;
   font-weight: 300;
 }
+
 /*End header*/
 
 /*start about*/
@@ -253,8 +259,8 @@ li {
 .fa-twitter-square:hover {
   color: #38a1f3;
 }
-.fa-dribble-square:hover {
-  color: #ea4c89;
+.fab fa-linkedin:hover {
+  color: #38a1f3;
 }
 /*End about*/
 
@@ -306,8 +312,10 @@ li {
   margin-bottom: 0;
 }
 .portfolio-img {
-  width: 50rem;
+  width: 25%;
+  height: 25%;
   flex: 1;
+  text-align: center;
 }
 .portfolio-description {
   flex: 1;
@@ -443,7 +451,9 @@ input[type="submit"]:hover {
   border-radius: 100%;
   display: flex;
   animation: pulse 2s infinite; /*animation of the kyframes chev*/
+  cursor: pointer;
 }
+
 .up i {
   color: #16162d;
   font-size: 2rem;
@@ -465,4 +475,99 @@ input[type="submit"]:hover {
   100% {
     box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
   }
+}
+/*media queries*/
+@media screen and (max-width: 768px) {
+  body {
+    /* background: url(images/background3.jpg) no-repeat center fixed; */
+    background: #221e3f;
+    background-size: cover;
+  }
+  .landing-text h1 {
+    font-size: 15rem;
+  }
+  .landing-text h6 {
+    font-size: 1.7rem;
+  }
+  .nav-list {
+    flex-direction: column;
+  }
+  li {
+    margin: 2rem 0;
+  }
+  .nav-link {
+    font-size: 4.5rem;
+  }
+  .about-heading h1 {
+    font-size: 8rem;
+  }
+  .section-heading h1 {
+    font-size: 3rem;
+  }
+  .about-details .nav-list {
+    flex-direction: initial; /* to allign the icons*/
+  }
+  .about-details li {
+    margin: 0 2rem;
+  }
+  .icon-container {
+    width: 7rem;
+    height: 7rem;
+  }
+  .icon-container i {
+    font-size: 4rem;
+  }
+  .timeline ul {
+    margin: 0 0 0 auto;
+  }
+  .timeline .date::before {
+    left: -20rem;
+  }
+  .timeline .date::after {
+    left: -5.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu-toggler {
+    top: 2rem;
+    right: 2rem;
+  }
+}
+.landing-text h1 {
+  font-size: 8rem;
+}
+.landing-text h6 {
+  font-size: 1.4rem;
+}
+.nav-link {
+  font-size: 3.5rem;
+}
+.about .container {
+  flex-direction: column;
+}
+.profile-img {
+  margin: 0 0 7rem 0;
+}
+.portfolio-item {
+  flex-direction: column;
+}
+.portfolio-img {
+  margin: 0 0 2rem 0;
+  order: 1; /*to fox the alligment*/
+}
+.portfolio-description {
+  margin: 0;
+  order: 2;
+}
+.timeline p {
+  font-size: 1.6rem;
+}
+.timeline .date::before {
+  font-size: 1.4rem;
+}
+form {
+  width: 100%;
+}
+.up {
+  right: 2rem;
 }
