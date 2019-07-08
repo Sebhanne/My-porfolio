@@ -30,10 +30,16 @@ a {
 p {
   font-size: 1.8rem;
   font-weight: 300;
-  font-display: justify;
+  font-display: center;
 }
 img {
   width: 75%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 /*end global*/
 
