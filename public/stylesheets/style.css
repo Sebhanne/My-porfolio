@@ -280,7 +280,7 @@ li {
   grid-gap: 2.5rem;
   text-align: center;
 }
-.skills {
+.skill {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -542,10 +542,10 @@ input[type="submit"]:hover {
   }
 }
 .landing-text h1 {
-  font-size: 8rem;
+  font-size: 9rem;
 }
 .landing-text h6 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .nav-link {
   font-size: 3.5rem;
